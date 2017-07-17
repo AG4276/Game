@@ -96,6 +96,7 @@ PlayState.update = function () {
 
 PlayState._handleCollisions = function() { 
 	this.game.physics.arcade.collide(this.spiders, this.platforms);
+	this.game.physics.arcade.collide(this.spiders, this.enemyWalls);
 	this.game.physics.arcade.collide(this.hero, this.platforms);
 	this.game.physics.arcade.overlap(this.hero, this.coins, this._onHeroVsCoin, null, this);
 };
